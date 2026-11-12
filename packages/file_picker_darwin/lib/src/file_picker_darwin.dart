@@ -293,10 +293,6 @@ class FilePickerDarwin extends FilePickerPlatform {
             if (!isMacOS) "bytes": bytes,
           });
 
-      if (savedPath != null && isMacOS) {
-        await File(savedPath).writeAsBytes(bytes);
-      }
-
       if (savedPath == null) return null;
       return Uri.file(savedPath);
     } finally {
