@@ -243,8 +243,6 @@ class FilePickerWindows extends FilePickerPlatform {
       ),
     );
     if (savedFilePath != null) {
-      final file = File(savedFilePath);
-      await file.writeAsBytes(bytes);
       return Uri.file(savedFilePath);
     }
 
